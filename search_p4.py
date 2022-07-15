@@ -33,7 +33,9 @@ def SearchMyChanges( toSearchFor ):
                 print(cl["desc"])    
 
         if matches == False:
-            print("No matching CLs found")        
+            print("No matching CLs found")
+            
+        p4.disconnect()    
 
 toSearchFor = input("Search your P4 submission history for: ")
 SearchMyChanges( toSearchFor )
